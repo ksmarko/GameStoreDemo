@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
 using GameStore.BLL.DTO;
+using GameStore.BLL.Exceptions;
 using GameStore.BLL.Interfaces;
 using GameStore.DAL.Entities;
 using GameStore.DAL.Interfaces;
@@ -20,11 +21,6 @@ namespace GameStore.BLL.Services
             Database = uow ?? throw new ArgumentNullException();
         }
 
-        public void Dispose()
-        {
-            Database.Dispose();
-        }
-
         public void AddComment(int gameId, CommentDTO entity)
         {
             var game = Database.Games.Get(gameId);
@@ -34,7 +30,7 @@ namespace GameStore.BLL.Services
 
             var comment = Mapper.Map<CommentDTO, Comment>(entity);
             comment.Game = game;
-            comment.Publisher = Database.Publishers.Find(x => x.Name == entity.Publisher).FirstOrDefault() ?? new Publisher() { Name = entity.Publisher };
+            comment.Publisher = Database.Publishers.Find(x => x.Name == entity.Publisher).FirstOrDefault() ?? throw new PublisherNotFoundException();
 
             Database.Comments.Create(comment);
             Database.Save();
@@ -51,7 +47,7 @@ namespace GameStore.BLL.Services
             comment.Game = parentComment.Game;
             comment.Parent = parentComment;
             comment.Body = parentComment.Publisher.Name + ", " + entity.Body;
-            comment.Publisher = Database.Publishers.Find(x => x.Name == entity.Publisher).FirstOrDefault() ?? new Publisher() { Name = entity.Publisher };
+            comment.Publisher = Database.Publishers.Find(x => x.Name == entity.Publisher).FirstOrDefault() ?? throw new PublisherNotFoundException();
 
             Database.Comments.Create(comment);
             Database.Save();

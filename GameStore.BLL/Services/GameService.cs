@@ -21,11 +21,6 @@ namespace GameStore.BLL.Services
             Database = uow ?? throw new ArgumentNullException();
         }
 
-        public void Dispose()
-        {
-            Database.Dispose();
-        }
-
         public void Create(GameDTO entity)
         {
             if (entity == null)

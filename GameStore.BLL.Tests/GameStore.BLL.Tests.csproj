@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configuration\AutoMapperInitializer.cs" />
+    <Compile Include="Services\CommentServiceTests.cs" />
     <Compile Include="Services\GameServiceTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
