@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using GameStore.BLL.Infrastructure;
 
-namespace GameStore.BLL.Tests.Configuration
+namespace GameStore.WEB.Tests.Configuration
 {
     internal class AutoMapperInitializer
     {
@@ -11,7 +11,8 @@ namespace GameStore.BLL.Tests.Configuration
         {
             if (!_isInitialized)
             {
-                Mapper.Initialize(cfg => AutoMapperConfig.Configure(cfg));
+                //Mapper.Initialize(cfg => AutoMapperConfig.Configure(cfg));
+                GameStore.WEB.AutoMapperInitializer.Initialize();
                 _isInitialized = true;
             }
         }

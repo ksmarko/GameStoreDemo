@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
 using GameStore.BLL.DTO;
 using GameStore.BLL.Exceptions;
 using GameStore.BLL.Interfaces;
 using GameStore.DAL.Entities;
 using GameStore.DAL.Interfaces;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace GameStore.BLL.Services
 {
@@ -48,8 +46,8 @@ namespace GameStore.BLL.Services
             game.Name = entity.Name;
             game.Description = entity.Description;
             game.Comments = Mapper.Map<ICollection<CommentDTO>, ICollection<Comment>>(entity.Comments);
-            game.Genres = GetGenres(entity.Genres);
-            game.PlatformTypes = GetPlatforms(entity.PlatformTypes);
+            //game.Genres = GetGenres(entity.Genres);
+            //game.PlatformTypes = GetPlatforms(entity.PlatformTypes);
             
             Database.Games.Update(game);
             Database.Save();

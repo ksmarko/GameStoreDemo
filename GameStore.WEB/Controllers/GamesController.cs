@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using GameStore.BLL.DTO;
-using GameStore.BLL.Exceptions;
 using GameStore.BLL.Interfaces;
 using GameStore.WEB.Models;
 using System;
@@ -10,7 +9,6 @@ using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Web.Http;
-using System.Linq;
 
 namespace GameStore.WEB.Controllers
 {
@@ -20,30 +18,17 @@ namespace GameStore.WEB.Controllers
 
         public GamesController(IGameService gameService)
         {
-            _gameService = gameService;
+            _gameService = gameService ?? throw new ArgumentNullException();
         }
 
         [HttpPost]
-        public HttpResponseMessage CreateGame(GameModel model)
+        [Route("api/games")]
+        public IHttpActionResult CreateGame(GameModel model)
         {
-            if (!ModelState.IsValid)
-                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, "");
+            var game = Mapper.Map<GameModel, GameDTO>(model);
+            _gameService.Create(game);
 
-            try
-            {
-                var game = Mapper.Map<GameModel, GameDTO>(model);
-                _gameService.Create(game);
-            }
-            catch (PublisherNotFoundException ex)
-            {
-                return Request.CreateErrorResponse(HttpStatusCode.NotFound, ex.Message);
-            }
-            catch (ItemNotFoundException ex)
-            {
-                return Request.CreateErrorResponse(HttpStatusCode.NotFound, ex.Message);
-            }
-
-            return Request.CreateErrorResponse(HttpStatusCode.OK, "Game created");
+            return Ok("Game created");
         }
 
         [HttpGet]
@@ -61,36 +46,19 @@ namespace GameStore.WEB.Controllers
 
         [HttpPut]
         [Route("api/games/{id}")]
-        public HttpResponseMessage EditGame(int id, GameModel model)
+        public IHttpActionResult EditGame(int id, EditGameModel model)
         {
-            if (!ModelState.IsValid)
-                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, "");
+            var game = Mapper.Map<EditGameModel, GameDTO>(model);
+            game.Id = id;
+            _gameService.Edit(game);
 
-            try
-            {
-                var game = Mapper.Map<GameModel, GameDTO>(model);
-                game.Id = id;
-                _gameService.Edit(game);
-            }
-            catch (PublisherNotFoundException ex)
-            {
-                return Request.CreateErrorResponse(HttpStatusCode.NotFound, ex.Message);
-            }
-            catch (ItemNotFoundException ex)
-            {
-                return Request.CreateErrorResponse(HttpStatusCode.NotFound, ex.Message);
-            }
-
-            return Request.CreateErrorResponse(HttpStatusCode.OK, "Game edited");
+            return Ok("Game edited");
         }
 
         [HttpDelete]
         [Route("api/games/{id}")]
         public IHttpActionResult DeleteGame(int id)
         {
-            if (!ModelState.IsValid)
-                return BadRequest();
-
             _gameService.Delete(id);
 
             return Ok("Game deleted");

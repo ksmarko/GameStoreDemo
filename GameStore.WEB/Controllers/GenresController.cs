@@ -4,9 +4,6 @@ using GameStore.BLL.Interfaces;
 using GameStore.WEB.Models;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 
 namespace GameStore.WEB.Controllers
@@ -17,15 +14,12 @@ namespace GameStore.WEB.Controllers
 
         public GenresController(IGenreService genreService)
         {
-            _genreService = genreService;
+            _genreService = genreService ?? throw new ArgumentNullException();
         }
 
         [HttpPost]
         public IHttpActionResult CreateGenre(GenreModel model)
         {
-            if (!ModelState.IsValid)
-                return BadRequest();
-
             var genre = Mapper.Map<GenreModel, GenreDTO>(model);
             _genreService.Create(genre);
 
@@ -49,9 +43,6 @@ namespace GameStore.WEB.Controllers
         [Route("api/genres/{id}")]
         public IHttpActionResult EditGenre(int id, GenreModel model)
         {
-            if (!ModelState.IsValid)
-                return BadRequest();
-
             var genre = Mapper.Map<GenreModel, GenreDTO>(model);
             genre.Id = id;
             _genreService.Edit(genre);
@@ -63,9 +54,6 @@ namespace GameStore.WEB.Controllers
         [Route("api/genres/{id}")]
         public IHttpActionResult DeleteGenre(int id) 
         {
-            if (!ModelState.IsValid)
-                return BadRequest();
-
             _genreService.Delete(id);
 
             return Ok("Genre deleted");

@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿using System;
+using AutoMapper;
 using GameStore.BLL.DTO;
 using GameStore.BLL.Interfaces;
 using GameStore.WEB.Models;
@@ -13,15 +14,12 @@ namespace GameStore.WEB.Controllers
 
         public PublisherController(IPublisherService publisherService)
         {
-            _publisherService = publisherService;
+            _publisherService = publisherService ?? throw new ArgumentNullException();
         }
 
         [HttpPost]
         public IHttpActionResult CreatePublisher(PublisherModel model)
         {
-            if (!ModelState.IsValid)
-                return BadRequest();
-
             var publisher = Mapper.Map<PublisherModel, PublisherDTO>(model);
             _publisherService.Create(publisher);
 
@@ -45,9 +43,6 @@ namespace GameStore.WEB.Controllers
         [Route("api/publisher/{id}")]
         public IHttpActionResult EditPublisher(int id, PublisherModel model)
         {
-            if (!ModelState.IsValid)
-                return BadRequest();
-
             var publisher = Mapper.Map<PublisherModel, PublisherDTO>(model);
             publisher.Id = id;
             _publisherService.Edit(publisher);
@@ -59,9 +54,6 @@ namespace GameStore.WEB.Controllers
         [Route("api/publisher/{id}")]
         public IHttpActionResult DeletePublisher(int id)
         {
-            if (!ModelState.IsValid)
-                return BadRequest();
-
             _publisherService.Delete(id);
 
             return Ok("Publisher deleted");

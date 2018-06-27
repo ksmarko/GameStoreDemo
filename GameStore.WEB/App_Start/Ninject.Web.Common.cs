@@ -20,6 +20,7 @@ namespace GameStore.WEB.App_Start
     using Ninject.Web.Common;
     using Ninject.Web.Common.WebHost;
     using Ninject.Web.WebApi;
+    using NLog;
 
     public static class NinjectWebCommon 
     {
@@ -76,6 +77,7 @@ namespace GameStore.WEB.App_Start
             kernel.Bind<IGenreService>().To<GenreService>();
             kernel.Bind<IPublisherService>().To<PublisherService>();
             kernel.Bind<ICommentService>().To<CommentService>();
+            kernel.Bind<ILogger>().ToMethod(p => NLog.LogManager.GetCurrentClassLogger());
         }        
     }
 }

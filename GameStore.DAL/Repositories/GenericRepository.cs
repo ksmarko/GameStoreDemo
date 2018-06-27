@@ -1,13 +1,9 @@
-﻿using System;
+﻿using GameStore.DAL.EF;
+using GameStore.DAL.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
-using System.Data.Entity.Migrations;
-using System.Data.Entity.Validation;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using GameStore.DAL.EF;
-using GameStore.DAL.Interfaces;
 
 namespace GameStore.DAL.Repositories
 {

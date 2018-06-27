@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using AutoMapper;
+﻿using AutoMapper;
 using GameStore.BLL.DTO;
-using GameStore.DAL.Entities;
 using GameStore.WEB.Models;
 
 namespace GameStore.WEB.Infrastructure
@@ -18,8 +13,9 @@ namespace GameStore.WEB.Infrastructure
 
             cfg.CreateMap<GameModel, GameDTO>()
                 .ForMember(x => x.Comments, opt => opt.Ignore());
-                //.ForMember(x => x.Genres, opt => opt.Ignore())
-                //.ForMember(x => x.PlatformTypes, opt => opt.Ignore());
+
+            cfg.CreateMap<EditGameModel, GameDTO>()
+                .ForMember(x => x.Comments, opt => opt.Ignore());
 
             cfg.CreateMap<GenreDTO, GenreModel>()
                 .ForMember(dst => dst.Parent, map => map.MapFrom(src => src.Parent.Name));

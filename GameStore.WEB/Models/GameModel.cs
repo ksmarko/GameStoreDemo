@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace GameStore.WEB.Models
 {
@@ -10,20 +6,20 @@ namespace GameStore.WEB.Models
     {
         public int Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Name is required")]
         public string Name { get; set; }
 
         [MaxLength(500)]
         [DataType(DataType.MultilineText)]
         public string Description { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Genres field is required")]
         public string[] Genres { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Platforms field is required")]
         public string[] PlatformTypes { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Publisher is required")]
         public string Publisher { get; set; }
     }
 }

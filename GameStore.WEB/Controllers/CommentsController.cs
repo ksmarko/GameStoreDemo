@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
-using AutoMapper;
+﻿using AutoMapper;
 using GameStore.BLL.DTO;
 using GameStore.BLL.Interfaces;
 using GameStore.WEB.Models;
+using System;
+using System.Collections.Generic;
+using System.Web.Http;
 
 namespace GameStore.WEB.Controllers
 {
@@ -17,16 +14,13 @@ namespace GameStore.WEB.Controllers
 
         public CommentsController(ICommentService commentService)
         {
-            _commentService = commentService;
+            _commentService = commentService ?? throw new ArgumentNullException();
         }
 
         [HttpPost]
         [Route("api/games/{gameId}/comments")]
         public IHttpActionResult AddComment(int gameId, AddCommentModel model)
         {
-            if (!ModelState.IsValid)
-                return BadRequest();
-
             var comment = Mapper.Map<AddCommentModel, CommentDTO>(model);
 
             _commentService.AddComment(gameId, comment);
@@ -37,10 +31,7 @@ namespace GameStore.WEB.Controllers
         [HttpPost]
         [Route("api/comments/{commentId}/comments")]
         public IHttpActionResult Reply(int commentId, AddCommentModel model)
-        {
-            if (!ModelState.IsValid)
-                return BadRequest();
-
+        { 
             var comment = Mapper.Map<AddCommentModel, CommentDTO>(model);
 
             _commentService.Reply(commentId, comment);

@@ -26,6 +26,9 @@ namespace GameStore.DAL.EF
                 .WithRequired(o => o.Game)
                 .HasForeignKey(o => o.GameId)
                 .WillCascadeOnDelete(true);
+
+            modelBuilder.Entity<Game>()
+                .HasMany(c => c.Genres);
         }
     }
 
@@ -62,7 +65,7 @@ namespace GameStore.DAL.EF
             {
                 new PlatformType() {Type = "Mobile"},
                 new PlatformType() {Type = "Browser"},
-                new PlatformType() {Type = "Decktop"},
+                new PlatformType() {Type = "Desktop"},
                 new PlatformType() {Type = "Console"},
             };
 

@@ -1,0 +1,69 @@
+{ "time": "2018-06-27 12:49:27.4789", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-06-27 12:49:27.8132", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-06-27 12:52:40.4468", "level": "WARN", "message": {"details":"Model validation failed","user":"Anonymous","modelState":{"model.Genres":["Genres is required","Genres is required"]}} }
+{ "time": "2018-06-27 13:07:54.1865", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-06-27 13:07:54.8832", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-06-27 13:08:15.9496", "level": "WARN", "message": {"details":"Model validation failed","user":"Anonymous","modelState":{"model.Publisher":["Publisher is required","Publisher is required"]}} }
+{ "time": "2018-06-27 13:12:27.1342", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-06-27 13:12:27.8048", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-06-27 13:12:28.1411", "level": "WARN", "message": {"details":"Model validation failed","user":"Anonymous","modelState":{"model.Publisher":["Publisher is required","Publisher is required"]}} }
+{ "time": "2018-06-27 13:19:11.4569", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-06-27 13:19:11.8064", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-06-27 13:19:26.6675", "level": "INFO", "message": {"details":"Editing game","user":"Anonimous","entity":"PublisherDTO","model":{"Id":0,"Name":"Game","Description":"Game description","Genres":[],"PlatformTypes":["Desktop","Mobile"],"Publisher":"Ksenia Marko"}} }
+{ "time": "2018-06-27 13:21:38.4760", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-06-27 13:21:39.1406", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-06-27 13:21:40.4187", "level": "INFO", "message": {"details":"Editing game","user":"Anonimous","entity":"PublisherDTO","model":{"Id":0,"Name":"Game","Description":"Game description","Genres":[],"PlatformTypes":["Desktop","Mobile"],"Publisher":"Ksenia Marko"}} }
+{ "time": "2018-06-27 13:24:55.7610", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-06-27 13:24:56.4346", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-06-27 13:24:58.0588", "level": "INFO", "message": {"details":"Editing game","user":"Anonimous","entity":"PublisherDTO","model":{"Id":0,"Name":"Game","Description":"Game description","Genres":[],"PlatformTypes":["Desktop","Mobile"],"Publisher":"Ksenia Marko"}} }
+{ "time": "2018-06-27 13:26:54.7655", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-06-27 13:26:55.4567", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-06-27 13:26:55.7885", "level": "INFO", "message": {"details":"Editing game","user":"Anonimous","entity":"PublisherDTO","model":{"Id":0,"Name":"Game","Description":"Game description","Genres":[],"PlatformTypes":["Desktop","Mobile"],"Publisher":"Ksenia Marko"}} }
+{ "time": "2018-06-27 13:29:49.3869", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-06-27 13:29:50.0195", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-06-27 13:29:50.3287", "level": "INFO", "message": {"details":"Editing game","user":"Anonimous","entity":"PublisherDTO","model":{"Id":0,"Name":"Game","Description":"Game description","Genres":[],"PlatformTypes":["Desktop","Mobile"],"Publisher":"Ksenia Marko"}} }
+{ "time": "2018-06-27 13:31:15.3683", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-06-27 13:31:15.9999", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-06-27 13:31:16.3129", "level": "INFO", "message": {"details":"Editing game","user":"Anonimous","entity":"PublisherDTO","model":{"Id":0,"Name":"Game","Description":"Game description","Genres":[],"PlatformTypes":["Desktop","Mobile"],"Publisher":"Ksenia Marko"}} }
+{ "time": "2018-06-27 13:45:33.6639", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-06-27 13:45:34.2975", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-06-27 13:45:34.6158", "level": "WARN", "message": {"details":"Model validation failed","user":"Anonymous","modelState":{"model.Publisher":["Publisher is required","Publisher is required"]}} }
+{ "time": "2018-06-27 13:45:54.8919", "level": "INFO", "message": {"details":"Editing game","user":"Anonimous","entity":"PublisherDTO","model":{"Id":0,"Name":"Game","Description":"Game description","Genres":[],"PlatformTypes":["Desktop","Mobile"],"Publisher":"Ksenia Marko"}} }
+{ "time": "2018-06-27 13:46:21.5699", "level": "INFO", "message": {"details":"Editing game","user":"Anonimous","entity":"PublisherDTO","model":{"Id":0,"Name":"Game","Description":"Game description","Genres":[],"PlatformTypes":["Desktop","Mobile"],"Publisher":"Ksenia"}} }
+{ "time": "2018-06-27 13:52:11.5363", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-06-27 13:52:12.1734", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-06-27 13:54:16.2080", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-06-27 13:54:16.8404", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-06-27 13:55:58.0591", "level": "WARN", "message": {"details":"Model validation failed","user":"Anonymous","modelState":{"model.Publisher":["Publisher is required","Publisher is required"]}} }
+{ "time": "2018-06-27 14:09:12.2172", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-06-27 14:09:12.5543", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-06-27 14:18:51.1783", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-06-27 14:18:51.8125", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-06-27 14:23:47.2432", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-06-27 14:23:47.8809", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-06-27 14:27:51.0215", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-06-27 14:27:51.6647", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-06-27 14:28:55.6189", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-06-27 14:28:56.2637", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-06-27 14:31:21.7069", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-06-27 14:31:22.3371", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-06-27 14:37:29.6042", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-06-27 14:37:30.2466", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-06-27 14:41:47.2839", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-06-27 14:41:47.9331", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-06-27 14:43:00.8555", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-06-27 14:43:01.4911", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-06-27 14:44:43.8563", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-06-27 14:44:44.4911", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-06-27 14:45:42.0914", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-06-27 14:45:42.7206", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-06-27 14:48:54.6255", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-06-27 14:48:55.2621", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-06-27 15:12:38.2322", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-06-27 15:12:39.1043", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-06-27 15:12:44.2577", "level": "ERROR", "message": {"details":"Http request failed","user":"Anonimous","url":"http://localhost:58326/api/games","headers":"Cache-Control:System.String[]\r\nConnection:System.String[]\r\nAccept:System.String[]\r\nAccept-Encoding:System.String[]\r\nHost:System.String[]\r\nUser-Agent:System.String[]\r\nPostman-Token:System.String[]"} }
+{ "time": "2018-06-27 15:12:44.2747", "level": "ERROR", "message": {"details":"Http request failed","user":"Anonimous","url":"http://localhost:58326/api/games","headers":"Cache-Control:System.String[]\r\nConnection:System.String[]\r\nAccept:System.String[]\r\nAccept-Encoding:System.String[]\r\nHost:System.String[]\r\nUser-Agent:System.String[]\r\nPostman-Token:System.String[]"} }
+{ "time": "2018-06-27 15:57:18.9440", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-06-27 15:57:19.6058", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-06-27 15:58:50.5047", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-06-27 15:58:51.1479", "level": "INFO", "message": Configuring application completed. Starting application. }

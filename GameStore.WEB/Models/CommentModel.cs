@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace GameStore.WEB.Models
+﻿namespace GameStore.WEB.Models
 {
     public class CommentModel
     {
