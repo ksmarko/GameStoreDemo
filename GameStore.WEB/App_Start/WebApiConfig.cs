@@ -19,6 +19,12 @@ namespace GameStore.WEB
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            config.Routes.MapHttpRoute(
+                name: "AdditionalApi", 
+                routeTemplate: "api/{controller}/{id}/{action}", 
+                defaults: new { id = RouteParameter.Optional, action = RouteParameter.Optional });
+
         }
     }
 }
