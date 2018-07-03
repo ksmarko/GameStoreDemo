@@ -61,10 +61,10 @@ namespace GameStore.WEB.Filters
                     new
                     {
                         details = "Http request failed",
-                        user = "Anonimous",
+                        method = r.Method,
                         url = r.RequestUri,
-                        headers
-                        //TODO: Log here other usefull information which can be retrieved.
+                        userIP = ((HttpContextWrapper)r.Properties["MS_HttpContext"]).Request.UserHostAddress,
+                        message = exception.Message
                     }));
 
                 message = JsonConvert.SerializeObject(new { Reason = "An error occurred. Please try again." });

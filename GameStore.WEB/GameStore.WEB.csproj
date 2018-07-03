@@ -136,6 +136,7 @@
     <Compile Include="Controllers\GenresController.cs" />
     <Compile Include="Controllers\PublisherController.cs" />
     <Compile Include="Infrastructure\Exceptions\CustomApiException.cs" />
+    <Compile Include="Infrastructure\Filters\CustomActionFilter.cs" />
     <Compile Include="Infrastructure\Filters\CustomErrorFilter.cs" />
     <Compile Include="Infrastructure\Filters\CustomValidationFilter.cs" />
     <Compile Include="Global.asax.cs">

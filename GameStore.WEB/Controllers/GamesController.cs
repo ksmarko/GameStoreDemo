@@ -39,6 +39,7 @@ namespace GameStore.WEB.Controllers
         }
 
         [HttpGet]
+        [Route("api/games")]
         public IEnumerable<GameModel> GetGames()
         {
             return Mapper.Map<IEnumerable<GameDTO>, IEnumerable<GameModel>>(_gameService.GetAll());

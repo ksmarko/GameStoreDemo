@@ -21,6 +21,7 @@ namespace GameStore.WEB
                 GlobalConfiguration.Configure(WebApiConfig.Register);
                 AutoMapperInitializer.Initialize();
 
+                GlobalConfiguration.Configuration.Filters.Add(new CustomActionFilter(logger));
                 GlobalConfiguration.Configuration.Filters.Add(new CustomValidationFilter(logger));
                 GlobalConfiguration.Configuration.Filters.Add(new CustomErrorFilter(logger));
             }
