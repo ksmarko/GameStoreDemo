@@ -46,7 +46,7 @@ namespace GameStore.WEB.Tests.Controllers
         public void CreateGame_should_create_game()
         {
             //Act
-            var actionResult = _gamesController.CreateGame(new GameModel());
+            var actionResult = _gamesController.CreateGame(new AddGameModel());
 
             //Assert
             actionResult.Should().BeOfType<OkNegotiatedContentResult<string>>();

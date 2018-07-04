@@ -9,9 +9,10 @@ namespace GameStore.WEB.Infrastructure
         public static void Configure(IMapperConfigurationExpression cfg)
         {
             cfg.CreateMap<GameDTO, GameModel>()
-                .ForMember(dst => dst.Publisher, map => map.MapFrom(src => src.Publisher));
+                .ForMember(dst => dst.Publisher, map => map.MapFrom(src => src.Publisher))
+                .ForMember(dst => dst.CreationDate, map => map.MapFrom(src => src.CreationDate.ToShortDateString()));
 
-            cfg.CreateMap<GameModel, GameDTO>()
+            cfg.CreateMap<AddGameModel, GameDTO>()
                 .ForMember(x => x.Comments, opt => opt.Ignore());
 
             cfg.CreateMap<EditGameModel, GameDTO>()
@@ -29,6 +30,7 @@ namespace GameStore.WEB.Infrastructure
             
             cfg.CreateMap<AddCommentModel, CommentDTO>();
             cfg.CreateMap<PublisherModel, PublisherDTO>();
+            cfg.CreateMap<PlatformTypeDTO, PlatformModel>();
         }
     }
 }

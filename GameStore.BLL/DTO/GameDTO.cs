@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GameStore.BLL.DTO
 {
@@ -12,6 +9,9 @@ namespace GameStore.BLL.DTO
         public string Name { get; set; }
         public string Description { get; set; }
         public string Publisher { get; set; }
+        public int Views { get; set; }
+        public double Price { get; set; }
+        public DateTime CreationDate { get; set; }
         public ICollection<CommentDTO> Comments { get; set; }
         public ICollection<string> Genres { get; set; }
         public ICollection<string> PlatformTypes { get; set; }

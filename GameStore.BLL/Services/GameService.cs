@@ -28,6 +28,7 @@ namespace GameStore.BLL.Services
             game.Publisher = Database.Publishers.Find(x => x.Name == entity.Publisher).FirstOrDefault() ?? throw new PublisherNotFoundException();
             game.Genres = GetGenres(entity.Genres);
             game.PlatformTypes = GetPlatforms(entity.PlatformTypes);
+            game.CreationDate = DateTime.Now;
 
             Database.Games.Create(game);
             Database.Save();
@@ -58,9 +59,7 @@ namespace GameStore.BLL.Services
             var genres = new List<Genre>();
 
             foreach (var el in genresNames)
-            {
                 genres.Add(Database.Genres.Find(x => x.Name == el).FirstOrDefault() ?? throw new ItemNotFoundException("Genre not found"));
-            }
 
             return genres;
         }
@@ -70,9 +69,7 @@ namespace GameStore.BLL.Services
             var platforms = new List<PlatformType>();
 
             foreach (var el in platformsNames)
-            {
                 platforms.Add(Database.PlatformTypes.Find(x => x.Type == el).FirstOrDefault() ?? throw new ItemNotFoundException("Platform type not found"));
-            }
 
             return platforms;
         }
@@ -121,6 +118,9 @@ namespace GameStore.BLL.Services
 
             if (game == null)
                 throw new ArgumentNullException();
+
+            game.Views++;
+            Database.Games.Update(game);
 
             return Mapper.Map<Game, GameDTO>(game);
         }

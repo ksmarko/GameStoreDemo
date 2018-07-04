@@ -284,6 +284,21 @@ namespace GameStore.BLL.Tests.Services
             _gameRepository.Verify(x => x.Get(It.IsAny<int>()));
         }
 
+        [Test]
+        public void Get_should_increment_views()
+        {
+            //Arrange
+            var views = 1;
+            var incrementedViews = 2;
+            _gameRepository.Setup(x => x.Get(It.IsAny<int>())).Returns(new Game() { Name = It.IsAny<string>(), Views = views});
+
+            //Act
+            var game = _gameService.Get(It.IsAny<int>());
+
+            //Assert
+            Assert.AreEqual(incrementedViews, game.Views);
+        }
+
         #endregion
     }
 }

@@ -23,9 +23,9 @@ namespace GameStore.WEB.Controllers
 
         [HttpPost]
         [Route("api/games")]
-        public IHttpActionResult CreateGame(GameModel model)
+        public IHttpActionResult CreateGame(AddGameModel model)
         {
-            var game = Mapper.Map<GameModel, GameDTO>(model);
+            var game = Mapper.Map<AddGameModel, GameDTO>(model);
             _gameService.Create(game);
 
             return Ok("Game created");

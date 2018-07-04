@@ -27,7 +27,7 @@ namespace GameStore.WEB.Tests.Routes
             var routeTester = new RouteTester(_config, request);
 
             Assert.AreEqual(typeof(GamesController), routeTester.GetControllerType());
-            Assert.AreEqual(ReflectionHelper.GetMethodName((GamesController p) => p.CreateGame(It.IsAny<GameModel>())), routeTester.GetActionName());
+            Assert.AreEqual(ReflectionHelper.GetMethodName((GamesController p) => p.CreateGame(It.IsAny<AddGameModel>())), routeTester.GetActionName());
         }
 
         [Test]

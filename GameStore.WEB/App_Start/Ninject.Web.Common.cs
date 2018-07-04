@@ -77,6 +77,7 @@ namespace GameStore.WEB.App_Start
             kernel.Bind<IGenreService>().To<GenreService>();
             kernel.Bind<IPublisherService>().To<PublisherService>();
             kernel.Bind<ICommentService>().To<CommentService>();
+            kernel.Bind<IPlatformService>().To<PlatformService>();
             kernel.Bind<ILogger>().ToMethod(p => NLog.LogManager.GetCurrentClassLogger());
         }        
     }

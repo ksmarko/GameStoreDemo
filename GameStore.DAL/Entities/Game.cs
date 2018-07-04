@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace GameStore.DAL.Entities
 {
@@ -7,6 +9,13 @@ namespace GameStore.DAL.Entities
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
+        public int Views { get; set; }
+
+        [DataType(DataType.Currency)]
+        public double Price { get; set; }
+
+        public DateTime CreationDate { get; set; }
+
         public int PublisherId { get; set; }
         public virtual Publisher Publisher { get; set; }
         public virtual ICollection<Comment> Comments { get; set; }

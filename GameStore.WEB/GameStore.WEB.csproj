@@ -134,6 +134,7 @@
     <Compile Include="Controllers\CommentsController.cs" />
     <Compile Include="Controllers\GamesController.cs" />
     <Compile Include="Controllers\GenresController.cs" />
+    <Compile Include="Controllers\PlatformsController.cs" />
     <Compile Include="Controllers\PublisherController.cs" />
     <Compile Include="Infrastructure\Exceptions\CustomApiException.cs" />
     <Compile Include="Infrastructure\Filters\CustomActionFilter.cs" />
@@ -145,10 +146,12 @@
     <Compile Include="Infrastructure\AutoMapperConfig.cs" />
     <Compile Include="Infrastructure\LogMessageComposer.cs" />
     <Compile Include="Models\AddCommentModel.cs" />
+    <Compile Include="Models\AddGameModel.cs" />
     <Compile Include="Models\CommentModel.cs" />
     <Compile Include="Models\EditGameModel.cs" />
     <Compile Include="Models\GameModel.cs" />
     <Compile Include="Models\GenreModel.cs" />
+    <Compile Include="Models\PlatformModel.cs" />
     <Compile Include="Models\PublisherModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
