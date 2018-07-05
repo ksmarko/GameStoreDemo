@@ -74,5 +74,10 @@ namespace GameStore.BLL.Services
         {
             return Mapper.Map<IEnumerable<Publisher>, IEnumerable<PublisherDTO>>(Database.Publishers.GetAll());
         }
+
+        public void Dispose()
+        {
+            Database.Dispose();
+        }
     }
 }

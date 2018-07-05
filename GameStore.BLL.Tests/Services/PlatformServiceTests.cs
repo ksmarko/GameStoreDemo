@@ -10,6 +10,7 @@ using Moq;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace GameStore.BLL.Tests.Services
 {
@@ -57,7 +58,7 @@ namespace GameStore.BLL.Tests.Services
         public void GetAll_should_return_list_of_platforms()
         {
             //Arrange
-            _platformRepository.Setup(x => x.GetAll()).Returns(new List<PlatformType>());
+            _platformRepository.Setup(x => x.GetAll()).Returns(new List<PlatformType>() as IOrderedQueryable<PlatformType>);
 
             //Act
             var platforms = _platformService.GetAll();

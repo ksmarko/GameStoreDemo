@@ -9,6 +9,8 @@ using Moq;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+
 namespace GameStore.BLL.Tests.Services
 {
     [TestFixture]
@@ -151,7 +153,7 @@ namespace GameStore.BLL.Tests.Services
         public void GetAll_should_return_list_of_genres()
         {
             //Arrange
-            _genreRepository.Setup(x => x.GetAll()).Returns(new List<Genre>());
+            _genreRepository.Setup(x => x.GetAll()).Returns(new List<Genre>() as IOrderedQueryable<Genre>);
 
             //Act
             var genres = _genreService.GetAll();

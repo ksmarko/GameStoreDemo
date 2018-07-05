@@ -1,5 +1,6 @@
 ﻿using FluentAssertions;
 using GameStore.BLL.DTO;
+using GameStore.BLL.Helpers;
 using GameStore.BLL.Interfaces;
 using GameStore.WEB.Controllers;
 using GameStore.WEB.Models;
@@ -8,7 +9,12 @@ using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
+using System.Web.Http;
+using System.Web.Http.Controllers;
+using System.Web.Http.Hosting;
 using System.Web.Http.Results;
+using System.Web.Http.Routing;
 
 namespace GameStore.WEB.Tests.Controllers
 {
@@ -88,16 +94,25 @@ namespace GameStore.WEB.Tests.Controllers
         }
 
         [Test]
-        public void GetGames_should_return_all_games()
+        public void GetGames_should_return_all_games_with_pagination()
         {
             //Arrange
-            _gameService.Setup(x => x.GetAll()).Returns(new List<GameDTO>() { new GameDTO() });
+            var config = new HttpConfiguration();
+            var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:58326/api/games");
+            var route = config.Routes.MapHttpRoute("DefaultApi", "api/{controller}/{id}");
+            var routeData = new HttpRouteData(route, new HttpRouteValueDictionary { { "controller", "games" } });
+
+            _gamesController.ControllerContext = new HttpControllerContext(config, routeData, request);
+            _gamesController.Request = request;
+            _gamesController.Request.Properties[HttpPropertyKeys.HttpConfigurationKey] = config;
+
+            _gameService.Setup(x => x.GetAll(It.IsAny<PaginationParameters>())).Returns(new PagedList<GameDTO>(new List<GameDTO>(), 5, 1, 10));
 
             //Act
-            var actionResult = _gamesController.GetGames();
+            var response = _gamesController.GetGames(It.IsAny<PaginationParameters>());
 
             //Assert
-            Assert.AreEqual(1, actionResult.Count());
+            Assert.IsTrue((response as ResponseMessageResult).Response.Headers.Contains("X-Pagination"));
         }
 
         [Test]

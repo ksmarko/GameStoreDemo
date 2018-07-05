@@ -7,7 +7,7 @@ using GameStore.BLL.DTO;
 
 namespace GameStore.BLL.Interfaces
 {
-    public interface IPlatformService
+    public interface IPlatformService : IDisposable
     {
         IEnumerable<PlatformTypeDTO> GetAll();
     }

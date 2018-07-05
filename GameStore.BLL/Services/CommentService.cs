@@ -62,5 +62,10 @@ namespace GameStore.BLL.Services
 
             return Mapper.Map<IEnumerable<Comment>, IEnumerable<CommentDTO>>(Database.Comments.Find(x => x.Game.Id == game.Id));
         }
+
+        public void Dispose()
+        {
+            Database.Dispose();
+        }
     }
 }

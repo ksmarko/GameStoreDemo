@@ -9,5 +9,6 @@ namespace GameStore.BLL.Interfaces
 {
     public interface IPublisherService : IService<PublisherDTO>
     {
+        IEnumerable<PublisherDTO> GetAll();
     }
 }

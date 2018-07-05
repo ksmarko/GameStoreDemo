@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace GameStore.WEB.Models
 {
@@ -24,5 +25,8 @@ namespace GameStore.WEB.Models
         [DataType(DataType.Currency)]
         public double Price { get; set; }
 
+        [Required(ErrorMessage = "Please input publication date")]
+        [DataType(DataType.Date)]
+        public DateTime PublicationDate { get; set; }
     }
 }

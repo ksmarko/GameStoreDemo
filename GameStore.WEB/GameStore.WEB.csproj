@@ -136,6 +136,8 @@
     <Compile Include="Controllers\GenresController.cs" />
     <Compile Include="Controllers\PlatformsController.cs" />
     <Compile Include="Controllers\PublisherController.cs" />
+    <Compile Include="Helpers\PaginationHelper.cs" />
+    <Compile Include="Helpers\PaginationMetadata.cs" />
     <Compile Include="Infrastructure\Exceptions\CustomApiException.cs" />
     <Compile Include="Infrastructure\Filters\CustomActionFilter.cs" />
     <Compile Include="Infrastructure\Filters\CustomErrorFilter.cs" />

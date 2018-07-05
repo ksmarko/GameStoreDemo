@@ -148,3 +148,238 @@
 { "time": "2018-07-04 13:47:47.4543", "level": "INFO", "message": {"details":"Action finished"} }
 { "time": "2018-07-04 13:47:49.5083", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games","userIP":"::1"} }
 { "time": "2018-07-04 13:47:49.5575", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-04 15:10:14.6380", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-07-04 15:10:15.3097", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-07-04 15:10:15.5418", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games","userIP":"::1"} }
+{ "time": "2018-07-04 15:11:21.1419", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-07-04 15:11:21.8405", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-07-04 15:11:22.0717", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games","userIP":"::1"} }
+{ "time": "2018-07-04 15:12:04.4293", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-04 15:12:04.4458", "level": "ERROR", "message": {"details":"Http request failed","method":{"Method":"GET"},"url":"http://localhost:58326/api/games","userIP":"::1","message":"Error mapping types.\r\n\r\nMapping types:\r\nIQueryable`1 -> IQueryable`1\r\nSystem.Linq.IQueryable`1[[GameStore.DAL.Entities.Game, GameStore.DAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Linq.IQueryable`1[[GameStore.BLL.DTO.GameDTO, GameStore.BLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"} }
+{ "time": "2018-07-04 15:12:04.4678", "level": "ERROR", "message": {"details":"Http request failed","method":{"Method":"GET"},"url":"http://localhost:58326/api/games","userIP":"::1","message":"Error mapping types.\r\n\r\nMapping types:\r\nIQueryable`1 -> IQueryable`1\r\nSystem.Linq.IQueryable`1[[GameStore.DAL.Entities.Game, GameStore.DAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Linq.IQueryable`1[[GameStore.BLL.DTO.GameDTO, GameStore.BLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"} }
+{ "time": "2018-07-04 15:12:07.6326", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games","userIP":"::1"} }
+{ "time": "2018-07-04 15:15:32.7719", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-07-04 15:15:33.4323", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-07-04 15:15:33.6620", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games","userIP":"::1"} }
+{ "time": "2018-07-04 15:15:44.0164", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-04 15:15:44.0164", "level": "ERROR", "message": {"details":"Http request failed","method":{"Method":"GET"},"url":"http://localhost:58326/api/games","userIP":"::1","message":"Object reference not set to an instance of an object."} }
+{ "time": "2018-07-04 15:15:44.0474", "level": "ERROR", "message": {"details":"Http request failed","method":{"Method":"GET"},"url":"http://localhost:58326/api/games","userIP":"::1","message":"Object reference not set to an instance of an object."} }
+{ "time": "2018-07-04 15:16:49.1297", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-07-04 15:16:49.8052", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-07-04 15:16:50.0302", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games","userIP":"::1"} }
+{ "time": "2018-07-04 15:19:20.0113", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-07-04 15:19:20.7069", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-07-04 15:19:20.9650", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games?pageNumber=1&pageSize=8","userIP":"::1"} }
+{ "time": "2018-07-04 15:24:04.2849", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-07-04 15:24:04.6237", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-07-04 15:24:04.9236", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games?pageNumber=1&pageSize=8","userIP":"::1"} }
+{ "time": "2018-07-04 15:32:58.5026", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-07-04 15:32:59.1936", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-07-04 15:32:59.4635", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games?pageNumber=1&pageSize=8","userIP":"::1"} }
+{ "time": "2018-07-04 15:37:16.7072", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-07-04 15:37:17.3556", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-07-04 15:37:17.6157", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games?pageNumber=1&pageSize=8","userIP":"::1"} }
+{ "time": "2018-07-04 15:37:18.2241", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-04 15:37:32.4562", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games","userIP":"::1"} }
+{ "time": "2018-07-04 15:37:34.9908", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-04 15:37:35.0008", "level": "ERROR", "message": {"details":"Http request failed","method":{"Method":"GET"},"url":"http://localhost:58326/api/games","userIP":"::1","message":"Object reference not set to an instance of an object."} }
+{ "time": "2018-07-04 15:37:35.0008", "level": "ERROR", "message": {"details":"Http request failed","method":{"Method":"GET"},"url":"http://localhost:58326/api/games","userIP":"::1","message":"Object reference not set to an instance of an object."} }
+{ "time": "2018-07-04 15:37:46.6875", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"POST"},"url":"http://localhost:58326/api/games","userIP":"::1"} }
+{ "time": "2018-07-04 15:37:46.7851", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-04 15:37:47.4575", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"POST"},"url":"http://localhost:58326/api/games","userIP":"::1"} }
+{ "time": "2018-07-04 15:37:47.4676", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-04 15:37:48.1093", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"POST"},"url":"http://localhost:58326/api/games","userIP":"::1"} }
+{ "time": "2018-07-04 15:37:48.1093", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-04 15:37:49.0197", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"POST"},"url":"http://localhost:58326/api/games","userIP":"::1"} }
+{ "time": "2018-07-04 15:37:49.0297", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-04 15:37:51.2406", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"POST"},"url":"http://localhost:58326/api/games","userIP":"::1"} }
+{ "time": "2018-07-04 15:37:51.2496", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-04 15:37:51.7392", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"POST"},"url":"http://localhost:58326/api/games","userIP":"::1"} }
+{ "time": "2018-07-04 15:37:51.7472", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-04 15:37:52.2717", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"POST"},"url":"http://localhost:58326/api/games","userIP":"::1"} }
+{ "time": "2018-07-04 15:37:52.2967", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-04 15:37:52.7053", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"POST"},"url":"http://localhost:58326/api/games","userIP":"::1"} }
+{ "time": "2018-07-04 15:37:52.7053", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-04 15:37:53.3780", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"POST"},"url":"http://localhost:58326/api/games","userIP":"::1"} }
+{ "time": "2018-07-04 15:37:53.3940", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-04 15:37:54.0217", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"POST"},"url":"http://localhost:58326/api/games","userIP":"::1"} }
+{ "time": "2018-07-04 15:37:54.0287", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-04 15:37:54.6882", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"POST"},"url":"http://localhost:58326/api/games","userIP":"::1"} }
+{ "time": "2018-07-04 15:37:54.6882", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-04 15:37:58.3473", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games?pageNumber=1&pageSize=8","userIP":"::1"} }
+{ "time": "2018-07-04 15:37:58.3473", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-04 15:38:07.3696", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games?pageNumber=1&pageSize=5","userIP":"::1"} }
+{ "time": "2018-07-04 15:38:07.4006", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-04 15:38:49.1581", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games?pageNumber=2&pageSize=5","userIP":"::1"} }
+{ "time": "2018-07-04 15:38:49.1942", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-04 15:39:08.4497", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games?pageNumber=45&pageSize=5","userIP":"::1"} }
+{ "time": "2018-07-04 15:39:08.4782", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-04 15:39:20.8255", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games?pageNumber=3&pageSize=5","userIP":"::1"} }
+{ "time": "2018-07-04 15:39:20.8876", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-04 15:44:04.5330", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-07-04 15:44:05.1871", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-07-04 15:44:05.4636", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games?pageNumber=1&pageSize=5","userIP":"::1"} }
+{ "time": "2018-07-04 15:44:06.0322", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-04 15:44:16.6108", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games","userIP":"::1"} }
+{ "time": "2018-07-04 15:44:16.6398", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-04 15:47:58.0977", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-07-04 15:47:58.7614", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-07-04 15:47:58.9896", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games","userIP":"::1"} }
+{ "time": "2018-07-04 15:47:59.5515", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-04 15:49:49.4315", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games?pageNumber=1&pageSize=10","userIP":"::1"} }
+{ "time": "2018-07-04 15:49:49.4555", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-04 15:50:11.6824", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games?pageNumber=2&pageSize=10","userIP":"::1"} }
+{ "time": "2018-07-04 15:50:11.7144", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-04 15:54:55.8068", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-07-04 15:54:56.4643", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-07-04 15:54:56.7225", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games?pageNumber=2&pageSize=10","userIP":"::1"} }
+{ "time": "2018-07-04 15:54:57.2907", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-04 15:55:04.6046", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games","userIP":"::1"} }
+{ "time": "2018-07-04 15:55:04.6326", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-04 16:07:02.0178", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-07-04 16:07:02.6714", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-07-04 16:07:02.9332", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games?pageNumber=1&pageSize=8","userIP":"::1"} }
+{ "time": "2018-07-04 16:10:38.4372", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-07-04 16:10:39.0913", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-07-04 16:10:39.3506", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games?pageNumber=1&pageSize=8","userIP":"::1"} }
+{ "time": "2018-07-04 16:12:14.5576", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-07-04 16:12:15.2213", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-07-04 16:12:15.4802", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games?pageNumber=1&pageSize=8","userIP":"::1"} }
+{ "time": "2018-07-04 16:12:16.0353", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-04 16:12:26.9101", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games?pageNumber=1&pageSize=10","userIP":"::1"} }
+{ "time": "2018-07-04 16:12:26.9511", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-04 16:32:52.3940", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-07-04 16:32:53.0562", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-07-04 16:32:53.3184", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games?pageNumber=1&pageSize=10","userIP":"::1"} }
+{ "time": "2018-07-04 16:32:54.1536", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-04 16:33:13.8514", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games?pageNumber=2&pageSize=10","userIP":"::1"} }
+{ "time": "2018-07-04 16:33:13.8834", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-04 16:34:19.0614", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games","userIP":"::1"} }
+{ "time": "2018-07-04 16:34:27.7729", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-04 16:34:27.7729", "level": "ERROR", "message": {"details":"Http request failed","method":{"Method":"GET"},"url":"http://localhost:58326/api/games","userIP":"::1","message":"Object reference not set to an instance of an object."} }
+{ "time": "2018-07-04 16:34:27.7875", "level": "ERROR", "message": {"details":"Http request failed","method":{"Method":"GET"},"url":"http://localhost:58326/api/games","userIP":"::1","message":"Object reference not set to an instance of an object."} }
+{ "time": "2018-07-04 16:36:33.4442", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-07-04 16:36:34.0933", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-07-04 16:36:34.3233", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games","userIP":"::1"} }
+{ "time": "2018-07-04 16:36:34.9204", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-04 16:36:55.8514", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games?pageNumber=2&pageSize=10","userIP":"::1"} }
+{ "time": "2018-07-04 16:36:55.8784", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-04 16:37:15.9031", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games?pageNumber=1&pageSize=5","userIP":"::1"} }
+{ "time": "2018-07-04 16:37:15.9361", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-04 16:37:28.2441", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games?pageNumber=2&pageSize=5","userIP":"::1"} }
+{ "time": "2018-07-04 16:37:28.2816", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-04 16:37:58.7622", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games","userIP":"::1"} }
+{ "time": "2018-07-04 16:37:58.7862", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-04 16:46:56.1239", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-07-04 16:46:56.7912", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-07-04 16:46:57.0219", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games","userIP":"::1"} }
+{ "time": "2018-07-04 16:46:57.5904", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-04 16:47:15.4131", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games?pageNumber=2&pageSize=10","userIP":"::1"} }
+{ "time": "2018-07-04 16:47:15.4406", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-04 16:47:34.5134", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games?pageNumber=1&pageSize=10","userIP":"::1"} }
+{ "time": "2018-07-04 16:47:34.5474", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-04 17:06:01.0439", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-07-04 17:06:01.6995", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-07-04 17:06:01.9577", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games?pageNumber=1&pageSize=10","userIP":"::1"} }
+{ "time": "2018-07-04 17:06:02.5279", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-04 17:06:13.5106", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games","userIP":"::1"} }
+{ "time": "2018-07-04 17:06:13.5166", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-05 13:30:09.6927", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-07-05 13:30:10.4231", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-07-05 13:30:10.6565", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games","userIP":"::1"} }
+{ "time": "2018-07-05 13:30:12.7519", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-05 13:30:22.6187", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games","userIP":"::1"} }
+{ "time": "2018-07-05 13:30:22.6337", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-05 13:30:28.9531", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/publisher","userIP":"::1"} }
+{ "time": "2018-07-05 13:30:28.9892", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-05 13:33:24.8054", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/publisher","userIP":"::1"} }
+{ "time": "2018-07-05 13:35:14.9563", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-07-05 13:35:15.3085", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-07-05 13:35:15.5706", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games","userIP":"::1"} }
+{ "time": "2018-07-05 13:35:27.1407", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-05 13:35:35.4612", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/publisher","userIP":"::1"} }
+{ "time": "2018-07-05 13:35:35.4958", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-05 13:37:59.8233", "level": "WARN", "message": {"details":"Model validation failed","user":"Anonymous","modelState":{"model.PublicationDate":["Could not convert string to DateTime: 25"],"model":["Required property 'PublicationDate' not found in JSON"]}} }
+{ "time": "2018-07-05 13:39:58.6062", "level": "WARN", "message": {"details":"Model validation failed","user":"Anonymous","modelState":{"model.PublicationDate":["Could not convert string to DateTime: 25/06/2018"],"model":["Required property 'PublicationDate' not found in JSON"]}} }
+{ "time": "2018-07-05 13:44:06.1103", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-07-05 13:44:06.7868", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-07-05 13:44:07.0064", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/date","userIP":"::1"} }
+{ "time": "2018-07-05 13:44:07.0329", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-05 13:44:34.6259", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"POST"},"url":"http://localhost:58326/api/games","userIP":"::1"} }
+{ "time": "2018-07-05 13:44:40.4658", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-05 13:44:40.4658", "level": "ERROR", "message": {"details":"Http request failed","method":{"Method":"POST"},"url":"http://localhost:58326/api/games","userIP":"::1","message":"Exception of type 'GameStore.BLL.Exceptions.PublisherNotFoundException' was thrown."} }
+{ "time": "2018-07-05 13:44:40.4838", "level": "ERROR", "message": {"details":"Http request failed","method":{"Method":"POST"},"url":"http://localhost:58326/api/games","userIP":"::1","message":"Exception of type 'GameStore.BLL.Exceptions.PublisherNotFoundException' was thrown."} }
+{ "time": "2018-07-05 13:44:48.1813", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"POST"},"url":"http://localhost:58326/api/publisher","userIP":"::1"} }
+{ "time": "2018-07-05 13:44:48.2238", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-05 13:44:51.9084", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"POST"},"url":"http://localhost:58326/api/games","userIP":"::1"} }
+{ "time": "2018-07-05 13:44:56.9836", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-05 13:44:56.9836", "level": "ERROR", "message": {"details":"Http request failed","method":{"Method":"POST"},"url":"http://localhost:58326/api/games","userIP":"::1","message":"Exception of type 'GameStore.BLL.Exceptions.PublisherNotFoundException' was thrown."} }
+{ "time": "2018-07-05 13:44:56.9836", "level": "ERROR", "message": {"details":"Http request failed","method":{"Method":"POST"},"url":"http://localhost:58326/api/games","userIP":"::1","message":"Exception of type 'GameStore.BLL.Exceptions.PublisherNotFoundException' was thrown."} }
+{ "time": "2018-07-05 13:45:12.1793", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"POST"},"url":"http://localhost:58326/api/publisher","userIP":"::1"} }
+{ "time": "2018-07-05 13:45:12.1884", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-05 13:45:16.0061", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"POST"},"url":"http://localhost:58326/api/games","userIP":"::1"} }
+{ "time": "2018-07-05 13:45:16.0761", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-05 13:45:19.0503", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games","userIP":"::1"} }
+{ "time": "2018-07-05 13:45:19.1514", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-05 14:02:18.3899", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-07-05 14:02:19.0325", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-07-05 14:02:19.2648", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games","userIP":"::1"} }
+{ "time": "2018-07-05 14:02:19.9021", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-05 14:02:38.5309", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"POST"},"url":"http://localhost:58326/api/games","userIP":"::1"} }
+{ "time": "2018-07-05 14:02:38.6380", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-05 14:02:42.2199", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"POST"},"url":"http://localhost:58326/api/games","userIP":"::1"} }
+{ "time": "2018-07-05 14:02:42.2324", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-05 14:02:46.1836", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"POST"},"url":"http://localhost:58326/api/games","userIP":"::1"} }
+{ "time": "2018-07-05 14:02:46.1836", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-05 14:02:52.9262", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"POST"},"url":"http://localhost:58326/api/games","userIP":"::1"} }
+{ "time": "2018-07-05 14:02:52.9352", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-05 14:02:54.1292", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"POST"},"url":"http://localhost:58326/api/games","userIP":"::1"} }
+{ "time": "2018-07-05 14:02:54.1367", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-05 14:03:01.7971", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games","userIP":"::1"} }
+{ "time": "2018-07-05 14:03:01.7971", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-05 14:03:19.6079", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games?pageNumber=1&pageSize=3","userIP":"::1"} }
+{ "time": "2018-07-05 14:03:19.6484", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-05 14:03:39.3821", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games?pageNumber=2&pageSize=3","userIP":"::1"} }
+{ "time": "2018-07-05 14:03:39.4242", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-05 14:12:17.3737", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-07-05 14:12:18.0310", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-07-05 14:12:18.2947", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games?pageNumber=2&pageSize=3","userIP":"::1"} }
+{ "time": "2018-07-05 14:12:42.3061", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-07-05 14:12:42.9588", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-07-05 14:12:43.2181", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games?pageNumber=2&pageSize=3","userIP":"::1"} }
+{ "time": "2018-07-05 14:13:26.0131", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-07-05 14:13:26.6697", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-07-05 14:13:26.9241", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games?pageNumber=2&pageSize=3","userIP":"::1"} }
+{ "time": "2018-07-05 14:13:27.4649", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-05 14:13:37.8336", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games","userIP":"::1"} }
+{ "time": "2018-07-05 14:13:37.8646", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-05 14:17:30.5221", "level": "INFO", "message": Configuring application started. }
+{ "time": "2018-07-05 14:17:31.1779", "level": "INFO", "message": Configuring application completed. Starting application. }
+{ "time": "2018-07-05 14:17:31.4081", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games","userIP":"::1"} }
+{ "time": "2018-07-05 14:17:31.9289", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-05 14:17:41.8844", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"POST"},"url":"http://localhost:58326/api/games","userIP":"::1"} }
+{ "time": "2018-07-05 14:17:41.9835", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-05 14:17:46.3687", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games/5","userIP":"::1"} }
+{ "time": "2018-07-05 14:17:46.4948", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-05 14:17:50.5421", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games","userIP":"::1"} }
+{ "time": "2018-07-05 14:17:50.5421", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-05 14:18:17.8785", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games/2/download","userIP":"::1"} }
+{ "time": "2018-07-05 14:18:17.8845", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-05 14:18:31.2351", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"PUT"},"url":"http://localhost:58326/api/games/1","userIP":"::1"} }
+{ "time": "2018-07-05 14:18:31.2521", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-05 14:18:35.0480", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games","userIP":"::1"} }
+{ "time": "2018-07-05 14:18:35.0480", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-05 14:18:41.2458", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"DELETE"},"url":"http://localhost:58326/api/games/6","userIP":"::1"} }
+{ "time": "2018-07-05 14:18:41.2918", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-05 14:18:44.1757", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games","userIP":"::1"} }
+{ "time": "2018-07-05 14:18:44.1817", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-05 14:18:52.6124", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/games/1/genres","userIP":"::1"} }
+{ "time": "2018-07-05 14:18:52.6224", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-05 14:19:08.9376", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/platforms","userIP":"::1"} }
+{ "time": "2018-07-05 14:19:08.9726", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-05 14:19:29.6669", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/publisher","userIP":"::1"} }
+{ "time": "2018-07-05 14:19:29.7015", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-05 14:19:36.5807", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"DELETE"},"url":"http://localhost:58326/api/publisher/1","userIP":"::1"} }
+{ "time": "2018-07-05 14:19:36.5978", "level": "INFO", "message": {"details":"Action finished"} }
+{ "time": "2018-07-05 14:19:40.9932", "level": "INFO", "message": {"details":"Action executing started","method":{"Method":"GET"},"url":"http://localhost:58326/api/publisher/2/games","userIP":"::1"} }
+{ "time": "2018-07-05 14:19:41.0167", "level": "INFO", "message": {"details":"Action finished"} }

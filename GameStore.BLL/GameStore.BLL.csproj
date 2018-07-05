@@ -57,6 +57,8 @@
     <Compile Include="DTO\PublisherDTO.cs" />
     <Compile Include="Exceptions\ItemNotFoundException.cs" />
     <Compile Include="Exceptions\PublisherNotFoundException.cs" />
+    <Compile Include="Helpers\PaginationParameters.cs" />
+    <Compile Include="Helpers\PagedList.cs" />
     <Compile Include="Infrastructure\AutoMapperConfig.cs" />
     <Compile Include="Infrastructure\ConnectionModule.cs" />
     <Compile Include="Interfaces\ICommentService.cs" />

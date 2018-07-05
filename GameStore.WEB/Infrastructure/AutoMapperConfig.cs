@@ -10,7 +10,8 @@ namespace GameStore.WEB.Infrastructure
         {
             cfg.CreateMap<GameDTO, GameModel>()
                 .ForMember(dst => dst.Publisher, map => map.MapFrom(src => src.Publisher))
-                .ForMember(dst => dst.CreationDate, map => map.MapFrom(src => src.CreationDate.ToShortDateString()));
+                .ForMember(dst => dst.CreationDate, map => map.MapFrom(src => src.CreationDate.ToShortDateString()))
+                .ForMember(dst => dst.PublicationDate, map => map.MapFrom(src => src.PublicationDate.ToShortDateString()));
 
             cfg.CreateMap<AddGameModel, GameDTO>()
                 .ForMember(x => x.Comments, opt => opt.Ignore());

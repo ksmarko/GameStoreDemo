@@ -9,6 +9,8 @@ using Moq;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+
 namespace GameStore.BLL.Tests.Services
 {
     [TestFixture]
@@ -151,7 +153,7 @@ namespace GameStore.BLL.Tests.Services
         public void GetAll_should_return_list_of_publishers()
         {
             //Arrange
-            _publisherRepository.Setup(x => x.GetAll()).Returns(new List<Publisher>());
+            _publisherRepository.Setup(x => x.GetAll()).Returns(new List<Publisher>() as IOrderedQueryable<Publisher>);
 
             //Act
             var publishers = _publisherService.GetAll();

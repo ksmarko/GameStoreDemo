@@ -10,6 +10,8 @@ using Moq;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using GameStore.BLL.Helpers;
 
 namespace GameStore.BLL.Tests.Services
 {
@@ -75,7 +77,7 @@ namespace GameStore.BLL.Tests.Services
         {
             //Arrange
             var game = new GameDTO() {Name = "Game", Publisher = "Publisher"};
-            _publisherRepository.Setup(x => x.GetAll()).Returns(new List<Publisher>());
+            _publisherRepository.Setup(x => x.GetAll()).Returns(new List<Publisher>() as IOrderedQueryable<Publisher>);
 
             //Act & Assert
             Assert.Throws<PublisherNotFoundException>(() => _gameService.Create(game));
@@ -169,36 +171,6 @@ namespace GameStore.BLL.Tests.Services
 
             //Assert
             _gameRepository.Verify(x => x.Delete(It.IsAny<int>()));
-        }
-
-        #endregion
-
-        #region GetAll
-
-        [Test]
-        public void GetAll_should_return_list_of_games()
-        {
-            //Arrange
-            _gameRepository.Setup(x => x.GetAll()).Returns(new List<Game>());
-
-            //Act
-            var games = _gameService.GetAll();
-
-            //Assert
-            games.Should().NotBeNull();
-        }
-
-        [Test]
-        public void GetAll_should_return_empty_list_if_games_do_not_exist()
-        {
-            //Arrange
-            _gameRepository.Setup(x => x.GetAll()).Returns<IEnumerable<Game>>(null);
-
-            //Act
-            var games = _gameService.GetAll();
-
-            //Assert
-            games.Should().NotBeNull();
         }
 
         #endregion

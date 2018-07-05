@@ -15,6 +15,7 @@ namespace GameStore.DAL.Entities
         public double Price { get; set; }
 
         public DateTime CreationDate { get; set; }
+        public DateTime PublicationDate { get; set; }
 
         public int PublisherId { get; set; }
         public virtual Publisher Publisher { get; set; }

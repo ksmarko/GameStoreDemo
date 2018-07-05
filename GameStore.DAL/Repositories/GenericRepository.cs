@@ -18,10 +18,10 @@ namespace GameStore.DAL.Repositories
             this.dbSet = context.Set<TEntity>();
         }
 
-        public virtual IEnumerable<TEntity> GetAll()
+        public virtual IQueryable<TEntity> GetAll()
         {
             IQueryable<TEntity> query = dbSet;
-            return query.ToList();
+            return query;
         }
 
         public TEntity Get(int id)

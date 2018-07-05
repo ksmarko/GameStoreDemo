@@ -8,7 +8,7 @@ namespace GameStore.DAL.Interfaces
 {
     public interface IRepository<TEntity> where TEntity : class
     {
-        IEnumerable<TEntity> GetAll();
+        IQueryable<TEntity> GetAll();
         TEntity Get(int id);
         void Create(TEntity item);
         void Update(TEntity item);

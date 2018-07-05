@@ -10,5 +10,6 @@ namespace GameStore.BLL.Interfaces
 {
     public interface IGenreService : IService<GenreDTO>
     {
+        IEnumerable<GenreDTO> GetAll();
     }
 }

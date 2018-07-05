@@ -7,6 +7,8 @@ using GameStore.DAL.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using AutoMapper.QueryableExtensions;
+using GameStore.BLL.Helpers;
 
 namespace GameStore.BLL.Services
 {
@@ -85,9 +87,10 @@ namespace GameStore.BLL.Services
             Database.Save();
         }
 
-        public IEnumerable<GameDTO> GetAll()
+        public PagedList<GameDTO> GetAll(PaginationParameters paginationParameters)
         {
-            return Mapper.Map<IEnumerable<Game>, IEnumerable<GameDTO>>(Database.Games.GetAll());
+            var games = Database.Games.GetAll().OrderBy(x => x.Name).ProjectTo<GameDTO>();
+            return PagedList<GameDTO>.Create(games, paginationParameters.PageNumber, paginationParameters.PageSize);
         }
 
         public IEnumerable<GameDTO> GetByGenre(int genreId)
@@ -123,6 +126,11 @@ namespace GameStore.BLL.Services
             Database.Games.Update(game);
 
             return Mapper.Map<Game, GameDTO>(game);
+        }
+
+        public void Dispose()
+        {
+            Database.Dispose();
         }
     }
 }

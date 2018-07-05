@@ -21,5 +21,10 @@ namespace GameStore.BLL.Services
         {
             return Mapper.Map<IEnumerable<PlatformType>, IEnumerable<PlatformTypeDTO>>(Database.PlatformTypes.GetAll());
         }
+
+        public void Dispose()
+        {
+            Database.Dispose();
+        }
     }
 }
