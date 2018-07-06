@@ -146,7 +146,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\AutoMapperConfig.cs" />
-    <Compile Include="Infrastructure\LogMessageComposer.cs" />
+    <Compile Include="Helpers\LogMessageComposer.cs" />
     <Compile Include="Models\AddCommentModel.cs" />
     <Compile Include="Models\AddGameModel.cs" />
     <Compile Include="Models\CommentModel.cs" />

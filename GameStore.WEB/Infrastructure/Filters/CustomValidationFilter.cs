@@ -1,4 +1,4 @@
-﻿using GameStore.WEB.Infrastructure;
+﻿using GameStore.WEB.Helpers;
 using GameStore.WEB.Infrastructure.Exceptions;
 using NLog;
 using System;

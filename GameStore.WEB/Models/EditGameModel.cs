@@ -13,5 +13,7 @@ namespace GameStore.WEB.Models
 
         [Required(ErrorMessage = "Publisher is required")]
         public string Publisher { get; set; }
+
+        public double Price { get; set; }
     }
 }

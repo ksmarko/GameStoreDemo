@@ -37,6 +37,7 @@
       <HintPath>..\packages\Ninject.3.3.4\lib\net45\Ninject.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -57,6 +58,21 @@
     <Compile Include="DTO\PublisherDTO.cs" />
     <Compile Include="Exceptions\ItemNotFoundException.cs" />
     <Compile Include="Exceptions\PublisherNotFoundException.cs" />
+    <Compile Include="Filtering\Filters\CommentsFilter.cs" />
+    <Compile Include="Filtering\Filters\DateFilter.cs" />
+    <Compile Include="Filtering\Filters\DefaultFilter.cs" />
+    <Compile Include="Filtering\Parameters\DirectionType.cs" />
+    <Compile Include="Filtering\Parameters\FilterParameters.cs" />
+    <Compile Include="Filtering\Factory\GameSelectionPipeline.cs" />
+    <Compile Include="Filtering\Filters\GenresFilter.cs" />
+    <Compile Include="Filtering\Factory\IFilter.cs" />
+    <Compile Include="Filtering\Filters\NameFilter.cs" />
+    <Compile Include="Filtering\Factory\Pipeline.cs" />
+    <Compile Include="Filtering\Factory\PipelineFactory.cs" />
+    <Compile Include="Filtering\Filters\PlatformsFilter.cs" />
+    <Compile Include="Filtering\Filters\PriceFilter.cs" />
+    <Compile Include="Filtering\Filters\PublishersFilter.cs" />
+    <Compile Include="Filtering\Filters\ViewsFilter.cs" />
     <Compile Include="Helpers\PaginationParameters.cs" />
     <Compile Include="Helpers\PagedList.cs" />
     <Compile Include="Infrastructure\AutoMapperConfig.cs" />

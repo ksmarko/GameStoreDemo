@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using GameStore.BLL.DTO;
+﻿using GameStore.BLL.DTO;
+using GameStore.BLL.Filtering.Parameters;
 using GameStore.BLL.Helpers;
+using System.Collections.Generic;
 
 namespace GameStore.BLL.Interfaces
 {
@@ -12,6 +9,6 @@ namespace GameStore.BLL.Interfaces
     {
         IEnumerable<GameDTO> GetByGenre(int genreId);
         IEnumerable<GameDTO> GetByPlatformType(int platformId);
-        PagedList<GameDTO> GetAll(PaginationParameters paginationParameters);
+        PagedList<GameDTO> GetAll(PaginationParameters paginationParameters, FilterParameters filterParameters);
     }
 }

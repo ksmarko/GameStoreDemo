@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using GameStore.BLL.DTO;
+using GameStore.BLL.Filtering.Parameters;
 using GameStore.BLL.Helpers;
 using GameStore.BLL.Interfaces;
 using GameStore.WEB.Helpers;
@@ -41,12 +42,13 @@ namespace GameStore.WEB.Controllers
         }
 
         [HttpGet]
-        [Route("api/games", Name = "GetGames")]
-        public IHttpActionResult GetGames([FromUri] PaginationParameters paginationParameters)
+        [Route("api/games")]
+        public IHttpActionResult GetGames([FromUri] FilterParameters filterParameters, [FromUri] PaginationParameters paginationParameters)
         {
-            var parameters = paginationParameters ?? new PaginationParameters();
-            var games = _gameService.GetAll(parameters);
-            var paginationMetadata = PaginationHelper.GetPaginationMetadata(games, parameters, this, "GetGames");
+            paginationParameters = paginationParameters ?? new PaginationParameters();
+            filterParameters = filterParameters ?? new FilterParameters();
+            var games = _gameService.GetAll(paginationParameters, filterParameters);
+            var paginationMetadata = PaginationHelper.GetPaginationMetadata(games, paginationParameters, this);
             var items = Mapper.Map<IEnumerable<GameDTO>, IEnumerable<GameModel>>(games);
             var response = Request.CreateResponse(HttpStatusCode.OK, items);
             response.Headers.Add("X-Pagination", Newtonsoft.Json.JsonConvert.SerializeObject(paginationMetadata));

@@ -1,14 +1,16 @@
 ﻿using AutoMapper;
+using AutoMapper.QueryableExtensions;
 using GameStore.BLL.DTO;
 using GameStore.BLL.Exceptions;
+using GameStore.BLL.Filtering.Factory;
+using GameStore.BLL.Filtering.Parameters;
+using GameStore.BLL.Helpers;
 using GameStore.BLL.Interfaces;
 using GameStore.DAL.Entities;
 using GameStore.DAL.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using AutoMapper.QueryableExtensions;
-using GameStore.BLL.Helpers;
 
 namespace GameStore.BLL.Services
 {
@@ -48,9 +50,7 @@ namespace GameStore.BLL.Services
 
             game.Name = entity.Name;
             game.Description = entity.Description;
-            game.Comments = Mapper.Map<ICollection<CommentDTO>, ICollection<Comment>>(entity.Comments);
-            //game.Genres = GetGenres(entity.Genres);
-            //game.PlatformTypes = GetPlatforms(entity.PlatformTypes);
+            game.Price = entity.Price;
             
             Database.Games.Update(game);
             Database.Save();
@@ -87,10 +87,16 @@ namespace GameStore.BLL.Services
             Database.Save();
         }
 
-        public PagedList<GameDTO> GetAll(PaginationParameters paginationParameters)
+        public PagedList<GameDTO> GetAll(PaginationParameters paginationParameters, FilterParameters filterParameters)
         {
-            var games = Database.Games.GetAll().OrderBy(x => x.Name).ProjectTo<GameDTO>();
-            return PagedList<GameDTO>.Create(games, paginationParameters.PageNumber, paginationParameters.PageSize);
+            if (paginationParameters == null || filterParameters == null)
+                throw new ArgumentNullException();
+
+            var games = Database.Games.GetAll();
+            var pipeline = new PipelineFactory().Create(filterParameters);
+            var filteredGames = pipeline.Process(games);
+
+            return PagedList<GameDTO>.Create(filteredGames.ProjectTo<GameDTO>(), paginationParameters.PageNumber, paginationParameters.PageSize);
         }
 
         public IEnumerable<GameDTO> GetByGenre(int genreId)

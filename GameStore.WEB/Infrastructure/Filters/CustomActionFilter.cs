@@ -1,4 +1,4 @@
-﻿using GameStore.WEB.Infrastructure;
+﻿using GameStore.WEB.Helpers;
 using NLog;
 using System.Threading;
 using System.Threading.Tasks;

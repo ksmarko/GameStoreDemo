@@ -1,17 +1,14 @@
-﻿using GameStore.WEB.Infrastructure;
+﻿using GameStore.BLL.Exceptions;
+using GameStore.WEB.Helpers;
 using GameStore.WEB.Infrastructure.Exceptions;
 using Newtonsoft.Json;
 using NLog;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http.Filters;
-using GameStore.BLL.Exceptions;
 
 namespace GameStore.WEB.Filters
 {
@@ -54,7 +51,6 @@ namespace GameStore.WEB.Filters
                     code = HttpStatusCode.InternalServerError;
 
                 var r = context.Request;
-                var headers = string.Join(Environment.NewLine, r.Headers.Select(x => $"{x.Key}:{x.Value}"));
 
                 _log.Error(exception,
                     LogMessageComposer.Compose(

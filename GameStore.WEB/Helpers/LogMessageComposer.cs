@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace GameStore.WEB.Infrastructure
+namespace GameStore.WEB.Helpers
 {
     public static class LogMessageComposer
     {
