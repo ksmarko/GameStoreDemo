@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using GameStore.DAL.EF;
+﻿using GameStore.DAL.EF;
 using GameStore.DAL.Entities;
 using GameStore.DAL.Interfaces;
+using System;
 
 namespace GameStore.DAL.Repositories
 {
@@ -18,60 +14,20 @@ namespace GameStore.DAL.Repositories
         private GenericRepository<PlatformType> platformRepository;
         private GenericRepository<Publisher> publisherRepository;
 
-        public EFUnitOfWork(string connectionString)
+        public EFUnitOfWork(StoreContext context)
         {
-            db = new StoreContext(connectionString);
+            db = context;
         }
 
-        public IRepository<Comment> Comments
-        {
-            get
-            {
-                if (commentRepository == null)
-                    commentRepository = new GenericRepository<Comment>(db);
-                return commentRepository;
-            }
-        }
+        public IRepository<Comment> Comments => commentRepository ?? (commentRepository = new GenericRepository<Comment>(db));
 
-        public IRepository<Game> Games
-        {
-            get
-            {
-                if (gameRepository == null)
-                    gameRepository = new GenericRepository<Game>(db);
-                return gameRepository;
-            }
-        }
+        public IRepository<Game> Games => gameRepository ?? (gameRepository = new GenericRepository<Game>(db));
 
-        public IRepository<Genre> Genres
-        {
-            get
-            {
-                if (genreRepository == null)
-                    genreRepository = new GenericRepository<Genre>(db);
-                return genreRepository;
-            }
-        }
+        public IRepository<Genre> Genres => genreRepository ?? (genreRepository = new GenericRepository<Genre>(db));
 
-        public IRepository<PlatformType> PlatformTypes
-        {
-            get
-            {
-                if (platformRepository == null)
-                    platformRepository = new GenericRepository<PlatformType>(db);
-                return platformRepository;
-            }
-        }
+        public IRepository<PlatformType> PlatformTypes => platformRepository ?? (platformRepository = new GenericRepository<PlatformType>(db));
 
-        public IRepository<Publisher> Publishers
-        {
-            get
-            {
-                if (publisherRepository == null)
-                    publisherRepository = new GenericRepository<Publisher>(db);
-                return publisherRepository;
-            }
-        }
+        public IRepository<Publisher> Publishers => publisherRepository ?? (publisherRepository = new GenericRepository<Publisher>(db));
 
         public void Save()
         {
