@@ -16,7 +16,7 @@ namespace GameStore.BLL.Services
 
         public GenreService(IUnitOfWork uow)
         {
-            Database = uow ?? throw new ArgumentNullException();
+            Database = uow;
         }
 
         public void Create(GenreDTO entity)

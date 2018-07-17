@@ -16,7 +16,7 @@ namespace GameStore.BLL.Services
 
         public CommentService(IUnitOfWork uow)
         {
-            Database = uow ?? throw new ArgumentNullException();
+            Database = uow;
         }
 
         public void AddComment(int gameId, CommentDTO entity)

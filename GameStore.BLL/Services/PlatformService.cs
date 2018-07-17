@@ -14,7 +14,7 @@ namespace GameStore.BLL.Services
 
         public PlatformService(IUnitOfWork uow)
         {
-            Database = uow ?? throw new ArgumentNullException();
+            Database = uow;
         }
 
         public IEnumerable<PlatformTypeDTO> GetAll()

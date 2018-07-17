@@ -16,7 +16,7 @@ namespace GameStore.BLL.Services
 
         public PublisherService(IUnitOfWork uow)
         {
-            Database = uow ?? throw new ArgumentNullException();
+            Database = uow;
         }
 
         public void Create(PublisherDTO entity)

@@ -20,7 +20,7 @@ namespace GameStore.BLL.Services
 
         public GameService(IUnitOfWork uow)
         {
-            Database = uow ?? throw new ArgumentNullException();
+            Database = uow;
         }
 
         public void Create(GameDTO entity)
