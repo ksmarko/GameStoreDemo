@@ -1,8 +1,6 @@
-﻿using System;
-
-namespace GameStore.BLL.Interfaces
+﻿namespace GameStore.BLL.Interfaces
 {
-    public interface IService<T> : IDisposable where T : class
+    public interface IService<T> where T : class
     {
         void Create(T entity);
         void Edit(T entity);

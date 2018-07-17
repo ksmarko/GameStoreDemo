@@ -133,10 +133,5 @@ namespace GameStore.BLL.Services
 
             return Mapper.Map<Game, GameDTO>(game);
         }
-
-        public void Dispose()
-        {
-            Database.Dispose();
-        }
     }
 }

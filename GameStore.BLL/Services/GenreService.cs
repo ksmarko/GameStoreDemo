@@ -75,10 +75,5 @@ namespace GameStore.BLL.Services
 
             return Mapper.Map<Genre, GenreDTO>(genre);
         }
-
-        public void Dispose()
-        {
-            Database.Dispose();
-        }
     }
 }
