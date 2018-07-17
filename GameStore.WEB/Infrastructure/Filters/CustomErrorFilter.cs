@@ -46,7 +46,7 @@ namespace GameStore.WEB.Filters
             else
             {
                 if (exception is ItemNotFoundException || exception is PublisherNotFoundException)
-                    code = HttpStatusCode.NotFound;
+                    code = HttpStatusCode.NoContent;
                 else 
                     code = HttpStatusCode.InternalServerError;
 

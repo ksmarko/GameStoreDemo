@@ -46,7 +46,7 @@ namespace GameStore.BLL.Services
             var game = Database.Games.Get(entity.Id);
 
             if (game == null)
-                throw new ArgumentNullException();
+                throw new ItemNotFoundException();
 
             game.Name = entity.Name;
             game.Description = entity.Description;
@@ -81,7 +81,7 @@ namespace GameStore.BLL.Services
             var game = Database.Games.Get(id);
 
             if (game == null)
-                throw new ArgumentNullException();
+                throw new ItemNotFoundException();
 
             Database.Games.Delete(id);
             Database.Save();
@@ -104,7 +104,7 @@ namespace GameStore.BLL.Services
             var genre = Database.Genres.Get(genreId);
 
             if (genre == null)
-                throw new ArgumentNullException();
+                throw new ItemNotFoundException();
 
             var query = Database.Games.Find(x => x.Genres.Select(g => g.Id).Contains(genreId));
             return Mapper.Map<IEnumerable<Game>, IEnumerable<GameDTO>>(query);
@@ -115,7 +115,7 @@ namespace GameStore.BLL.Services
             var platformType = Database.PlatformTypes.Get(platformId);
 
             if (platformType == null)
-                throw new ArgumentNullException();
+                throw new ItemNotFoundException();
 
             var query = Database.Games.Find(x => x.PlatformTypes.Select(g => g.Id).Contains(platformId));
             return Mapper.Map<IEnumerable<Game>, IEnumerable<GameDTO>>(query);
@@ -126,7 +126,7 @@ namespace GameStore.BLL.Services
             var game = Database.Games.Get(id);
 
             if (game == null)
-                throw new ArgumentNullException();
+                throw new ItemNotFoundException();
 
             game.Views++;
             Database.Games.Update(game);

@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
 using GameStore.BLL.DTO;
 using GameStore.BLL.Exceptions;
 using GameStore.BLL.Interfaces;
 using GameStore.DAL.Entities;
 using GameStore.DAL.Interfaces;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace GameStore.BLL.Services
 {
@@ -23,13 +21,12 @@ namespace GameStore.BLL.Services
 
         public void AddComment(int gameId, CommentDTO entity)
         {
-            var game = Database.Games.Get(gameId);
-
-            if (game == null || entity == null)
+            if (entity == null)
                 throw new ArgumentNullException();
 
+            var game = Database.Games.Get(gameId);
             var comment = Mapper.Map<CommentDTO, Comment>(entity);
-            comment.Game = game;
+            comment.Game = game ?? throw new ItemNotFoundException();
             comment.Publisher = Database.Publishers.Find(x => x.Name == entity.Publisher).FirstOrDefault() ?? throw new PublisherNotFoundException();
 
             Database.Comments.Create(comment);
@@ -38,10 +35,13 @@ namespace GameStore.BLL.Services
 
         public void Reply(int commentId, CommentDTO entity)
         {
+            if (entity == null)
+                throw new ArgumentNullException();
+
             var parentComment = Database.Comments.Get(commentId);
 
-            if (parentComment == null || entity == null)
-                throw new ArgumentNullException();
+            if (parentComment == null)
+                throw new ItemNotFoundException();
 
             var comment = Mapper.Map<CommentDTO, Comment>(entity);
             comment.Game = parentComment.Game;
@@ -58,7 +58,7 @@ namespace GameStore.BLL.Services
             var game = Database.Games.Get(gameId);
 
             if (game == null)
-                throw new ArgumentNullException();
+                throw new ItemNotFoundException();
 
             return Mapper.Map<IEnumerable<Comment>, IEnumerable<CommentDTO>>(Database.Comments.Find(x => x.Game.Id == game.Id));
         }

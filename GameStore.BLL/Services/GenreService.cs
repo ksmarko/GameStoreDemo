@@ -6,6 +6,7 @@ using GameStore.DAL.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using GameStore.BLL.Exceptions;
 
 namespace GameStore.BLL.Services
 {
@@ -37,7 +38,7 @@ namespace GameStore.BLL.Services
             var genre = Database.Genres.Get(entity.Id);
 
             if (genre == null)
-                throw new ArgumentNullException();
+                throw new ItemNotFoundException();
 
             genre.Name = entity.Name;
 
@@ -50,7 +51,7 @@ namespace GameStore.BLL.Services
             var genre = Database.Genres.Get(id);
 
             if (genre == null)
-                throw new ArgumentNullException();
+                throw new ItemNotFoundException();
 
             //TODO: replace to the context file
             foreach (var el in Database.Genres.Find(x => x.ParentId == id).ToList())
@@ -70,7 +71,7 @@ namespace GameStore.BLL.Services
             var genre = Database.Genres.Get(id);
 
             if (genre == null)
-                throw new ArgumentNullException();
+                throw new ItemNotFoundException();
 
             return Mapper.Map<Genre, GenreDTO>(genre);
         }

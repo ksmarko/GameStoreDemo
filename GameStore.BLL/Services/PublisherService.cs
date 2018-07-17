@@ -6,6 +6,7 @@ using GameStore.DAL.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using GameStore.BLL.Exceptions;
 
 namespace GameStore.BLL.Services
 {
@@ -34,7 +35,7 @@ namespace GameStore.BLL.Services
             var publisher = Database.Publishers.Get(id);
 
             if (publisher == null)
-                throw new ArgumentNullException();
+                throw new PublisherNotFoundException();
 
             //TODO: replace to the context file
             foreach (var el in Database.Games.Find(x => x.Publisher.Id == id).ToList())
@@ -52,7 +53,7 @@ namespace GameStore.BLL.Services
             var publisher = Database.Publishers.Get(entity.Id);
 
             if (publisher == null)
-                throw new ArgumentNullException();
+                throw new PublisherNotFoundException();
 
             publisher.Name = entity.Name;
 
@@ -65,7 +66,7 @@ namespace GameStore.BLL.Services
             var publisher = Database.Publishers.Get(id);
 
             if (publisher == null)
-                throw new ArgumentNullException();
+                throw new PublisherNotFoundException();
 
             return Mapper.Map<Publisher, PublisherDTO>(publisher);
         }
