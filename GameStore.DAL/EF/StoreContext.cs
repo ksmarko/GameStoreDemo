@@ -18,9 +18,7 @@ namespace GameStore.DAL.EF
             Database.SetInitializer(new DbInitializer());
         }
 
-        public StoreContext() { } 
-
-        public StoreContext(string connectionString) : base(connectionString) { }
+        public StoreContext() : base("DefaultConnection") { }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

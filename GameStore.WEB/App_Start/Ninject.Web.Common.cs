@@ -50,7 +50,7 @@ namespace GameStore.WEB.App_Start
         /// <returns>The created kernel.</returns>
         private static IKernel CreateKernel()
         {
-            var serviceModule = new ConnectionModule("DefaultConnection");
+            var serviceModule = new ConnectionModule();
             var kernel = new StandardKernel(serviceModule);
             try
             {
