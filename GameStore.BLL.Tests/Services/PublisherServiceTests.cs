@@ -10,6 +10,7 @@ using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using GameStore.BLL.Exceptions;
 
 namespace GameStore.BLL.Tests.Services
 {
@@ -50,17 +51,6 @@ namespace GameStore.BLL.Tests.Services
 
         #endregion
 
-        #region GameService
-
-        [Test]
-        public void GameService_should_throw_ArgumentNullException_when_unit_of_work_is_null()
-        {
-            // Act & Assert
-            Assert.Throws<ArgumentNullException>(() => _publisherService = new PublisherService(null));
-        }
-
-        #endregion
-
         #region Create
 
         [Test]
@@ -94,14 +84,14 @@ namespace GameStore.BLL.Tests.Services
         }
 
         [Test]
-        public void Edit_should_throw_ArgumentNullException_if_publisher_with_specified_id_does_not_exist_in_the_database()
+        public void Edit_should_throw_PublisherNotFoundException_if_publisher_with_specified_id_does_not_exist_in_the_database()
         {
             //Arrange
             var publisher = new PublisherDTO() { Name = It.IsAny<string>() };
             _publisherRepository.Setup(x => x.Get(It.IsAny<int>())).Returns<Publisher>(null);
 
             //Act & Assert
-            Assert.Throws<ArgumentNullException>(() => _publisherService.Edit(publisher));
+            Assert.Throws<PublisherNotFoundException>(() => _publisherService.Edit(publisher));
         }
 
         [Test]
@@ -123,13 +113,13 @@ namespace GameStore.BLL.Tests.Services
         #region Get
 
         [Test]
-        public void Get_should_throw_ArgumentNullException_if_publisher_with_specified_id_does_not_exist_in_the_database()
+        public void Get_should_throw_PublisherNotFoundException_if_publisher_with_specified_id_does_not_exist_in_the_database()
         {
             //Arrange
             _publisherRepository.Setup(x => x.Get(It.IsAny<int>())).Returns<Publisher>(null);
 
             //Act & Assert
-            Assert.Throws<ArgumentNullException>(() => _publisherService.Get(It.IsAny<int>()));
+            Assert.Throws<PublisherNotFoundException>(() => _publisherService.Get(It.IsAny<int>()));
         }
 
         [Test]
@@ -180,13 +170,13 @@ namespace GameStore.BLL.Tests.Services
         #region Delete
 
         [Test]
-        public void Delete_should_throw_ArgumentNullException_if_publisher_with_specified_id_does_not_exist_in_the_database()
+        public void Delete_should_throw_PublisherNotFoundException_if_publisher_with_specified_id_does_not_exist_in_the_database()
         {
             //Arrange
             _publisherRepository.Setup(x => x.Get(It.IsAny<int>())).Returns<Publisher>(null);
 
             //Act & Assert
-            Assert.Throws<ArgumentNullException>(() => _publisherService.Delete(It.IsAny<int>()));
+            Assert.Throws<PublisherNotFoundException>(() => _publisherService.Delete(It.IsAny<int>()));
         }
 
         [Test]

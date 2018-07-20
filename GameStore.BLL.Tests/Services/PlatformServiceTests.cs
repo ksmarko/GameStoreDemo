@@ -41,17 +41,6 @@ namespace GameStore.BLL.Tests.Services
 
         #endregion
 
-        #region PlatformService
-
-        [Test]
-        public void PlatformService_should_throw_ArgumentNullException_when_unit_of_work_is_null()
-        {
-            // Act & Assert
-            Assert.Throws<ArgumentNullException>(() => _platformService = new PlatformService(null));
-        }
-
-        #endregion
-
         #region GetAll
 
         [Test]

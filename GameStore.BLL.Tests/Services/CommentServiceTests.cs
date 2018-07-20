@@ -53,27 +53,16 @@ namespace GameStore.BLL.Tests.Services
 
         #endregion
 
-        #region CommentService
-
-        [Test]
-        public void CommentService_should_throw_ArgumentNullException_when_unit_of_work_is_null()
-        {
-            // Act & Assert
-            Assert.Throws<ArgumentNullException>(() => _commentService = new CommentService(null));
-        }
-
-        #endregion
-
         #region GetAll
 
         [Test]
-        public void GetAll_should_throw_ArgumentNullException_if_game_with_specified_id_does_not_exist_in_the_database()
+        public void GetAll_should_throw_ItemNotFoundException_if_game_with_specified_id_does_not_exist_in_the_database()
         {
             //Arrange
             _gameRepository.Setup(x => x.Get(It.IsAny<int>())).Returns<Game>(null);
 
             //Act & Assert
-            Assert.Throws<ArgumentNullException>(() => _commentService.GetAll(It.IsAny<int>()));
+            Assert.Throws<ItemNotFoundException>(() => _commentService.GetAll(It.IsAny<int>()));
         }
 
         [Test]

@@ -15,6 +15,7 @@ using System.Web.Http.Controllers;
 using System.Web.Http.Hosting;
 using System.Web.Http.Results;
 using System.Web.Http.Routing;
+using GameStore.BLL.Filtering.Parameters;
 
 namespace GameStore.WEB.Tests.Controllers
 {
@@ -106,10 +107,10 @@ namespace GameStore.WEB.Tests.Controllers
             _gamesController.Request = request;
             _gamesController.Request.Properties[HttpPropertyKeys.HttpConfigurationKey] = config;
 
-            _gameService.Setup(x => x.GetAll(It.IsAny<PaginationParameters>())).Returns(new PagedList<GameDTO>(new List<GameDTO>(), 5, 1, 10));
+            _gameService.Setup(x => x.GetAll(It.IsAny<PaginationParameters>(), It.IsAny<FilterParameters>())).Returns(new PagedList<GameDTO>(new List<GameDTO>(), 5, 1, 10));
 
             //Act
-            var response = _gamesController.GetGames(It.IsAny<PaginationParameters>());
+            var response = _gamesController.GetGames(It.IsAny<FilterParameters>(), It.IsAny<PaginationParameters>());
 
             //Assert
             Assert.IsTrue((response as ResponseMessageResult).Response.Headers.Contains("X-Pagination"));

@@ -52,17 +52,6 @@ namespace GameStore.BLL.Tests.Services
 
         #endregion
 
-        #region GameService
-
-        [Test]
-        public void GameService_should_throw_ArgumentNullException_when_unit_of_work_is_null()
-        {
-            // Act & Assert
-            Assert.Throws<ArgumentNullException>(() => _gameService = new GameService(null));
-        }
-
-        #endregion
-
         #region Create
 
         [Test]
@@ -122,14 +111,14 @@ namespace GameStore.BLL.Tests.Services
         }
 
         [Test]
-        public void Edit_should_throw_ArgumentNullException_if_game_with_specified_id_does_not_exist_in_the_database()
+        public void Edit_should_throw_ItemNotFoundException_if_game_with_specified_id_does_not_exist_in_the_database()
         {
             //Arrange
             var game = new GameDTO() { Name = It.IsAny<string>()};
             _gameRepository.Setup(x => x.Get(It.IsAny<int>())).Returns<Game>(null);
 
             //Act & Assert
-            Assert.Throws<ArgumentNullException>(() => _gameService.Edit(game));
+            Assert.Throws<ItemNotFoundException>(() => _gameService.Edit(game));
         }
 
         [Test]
@@ -151,13 +140,13 @@ namespace GameStore.BLL.Tests.Services
         #region Delete
 
         [Test]
-        public void Delete_should_throw_ArgumentNullException_if_game_with_specified_id_does_not_exist_in_the_database()
+        public void Delete_should_throw_ItemNotFoundException_if_game_with_specified_id_does_not_exist_in_the_database()
         {
             //Arrange
             _gameRepository.Setup(x => x.Get(It.IsAny<int>())).Returns<Game>(null);
 
             //Act & Assert
-            Assert.Throws<ArgumentNullException>(() => _gameService.Delete(It.IsAny<int>()));
+            Assert.Throws<ItemNotFoundException>(() => _gameService.Delete(It.IsAny<int>()));
         }
 
         [Test]
@@ -178,13 +167,13 @@ namespace GameStore.BLL.Tests.Services
         #region GetByGenre
 
         [Test]
-        public void GetByGenre_should_throw_ArgumentNullException_if_genre_with_specified_id_does_not_exist_in_the_database()
+        public void GetByGenre_should_throw_ItemNotFoundException_if_genre_with_specified_id_does_not_exist_in_the_database()
         {
             //Arrange
             _genreRepository.Setup(x => x.Get(It.IsAny<int>())).Returns<Genre>(null);
 
             //Act & Assert
-            Assert.Throws<ArgumentNullException>(() => _gameService.GetByGenre(It.IsAny<int>()));
+            Assert.Throws<ItemNotFoundException>(() => _gameService.GetByGenre(It.IsAny<int>()));
         }
 
         [Test]
@@ -206,13 +195,13 @@ namespace GameStore.BLL.Tests.Services
         #region GetByPlatformType
 
         [Test]
-        public void GetByPlatformType_should_throw_ArgumentNullException_if_platform_type_with_specified_id_does_not_exist_in_the_database()
+        public void GetByPlatformType_should_throw_ItemNotFoundException_if_platform_type_with_specified_id_does_not_exist_in_the_database()
         {
             //Arrange
             _platformRepository.Setup(x => x.Get(It.IsAny<int>())).Returns<PlatformType>(null);
 
             //Act & Assert
-            Assert.Throws<ArgumentNullException>(() => _gameService.GetByPlatformType(It.IsAny<int>()));
+            Assert.Throws<ItemNotFoundException>(() => _gameService.GetByPlatformType(It.IsAny<int>()));
         }
 
         [Test]
@@ -234,13 +223,13 @@ namespace GameStore.BLL.Tests.Services
         #region Get
 
         [Test]
-        public void Get_should_throw_ArgumentNullException_if_game_with_specified_id_does_not_exist_in_the_database()
+        public void Get_should_throw_ItemNotFoundException_if_game_with_specified_id_does_not_exist_in_the_database()
         {
             //Arrange
             _gameRepository.Setup(x => x.Get(It.IsAny<int>())).Returns<Game>(null);
 
             //Act & Assert
-            Assert.Throws<ArgumentNullException>(() => _gameService.Get(It.IsAny<int>()));
+            Assert.Throws<ItemNotFoundException>(() => _gameService.Get(It.IsAny<int>()));
         }
 
         [Test]

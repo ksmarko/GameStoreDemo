@@ -2,6 +2,7 @@
 using GameStore.DAL.Interfaces;
 using GameStore.DAL.Repositories;
 using Ninject.Modules;
+using Ninject.Web.Common;
 
 namespace GameStore.BLL.Infrastructure
 {
@@ -9,8 +10,8 @@ namespace GameStore.BLL.Infrastructure
     {
         public override void Load()
         {
-            Bind<StoreContext>().ToSelf();
-            Bind<IUnitOfWork>().To<EFUnitOfWork>();
+            Bind<StoreContext>().ToSelf().InRequestScope();
+            Bind<IUnitOfWork>().To<EFUnitOfWork>().InRequestScope();
         }
     }
 }

@@ -138,10 +138,11 @@
     <Compile Include="Controllers\PublisherController.cs" />
     <Compile Include="Helpers\PaginationHelper.cs" />
     <Compile Include="Helpers\PaginationMetadata.cs" />
-    <Compile Include="Infrastructure\Exceptions\CustomApiException.cs" />
-    <Compile Include="Infrastructure\Filters\CustomActionFilter.cs" />
-    <Compile Include="Infrastructure\Filters\CustomErrorFilter.cs" />
-    <Compile Include="Infrastructure\Filters\CustomValidationFilter.cs" />
+    <Compile Include="Infrastructure\LoggerConfigurationModule.cs" />
+    <Compile Include="Exceptions\CustomApiException.cs" />
+    <Compile Include="Filters\CustomActionFilter.cs" />
+    <Compile Include="Filters\CustomErrorFilter.cs" />
+    <Compile Include="Filters\CustomValidationFilter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -179,10 +180,6 @@
     <ProjectReference Include="..\GameStore.BLL\GameStore.BLL.csproj">
       <Project>{61c83cfc-b714-449b-9490-d1f099ee6d11}</Project>
       <Name>GameStore.BLL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\GameStore.DAL\GameStore.DAL.csproj">
-      <Project>{FC1CD451-6FDF-42C2-A220-41CFBB83EE95}</Project>
-      <Name>GameStore.DAL</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

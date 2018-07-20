@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Net;
 
-namespace GameStore.WEB.Infrastructure.Exceptions
+namespace GameStore.WEB.Exceptions
 {
     public class CustomApiException : Exception
     {

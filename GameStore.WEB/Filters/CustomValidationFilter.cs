@@ -1,5 +1,5 @@
-﻿using GameStore.WEB.Helpers;
-using GameStore.WEB.Infrastructure.Exceptions;
+﻿using GameStore.WEB.Exceptions;
+using GameStore.WEB.Helpers;
 using NLog;
 using System;
 using System.Linq;
